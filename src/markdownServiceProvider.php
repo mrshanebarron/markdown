@@ -11,14 +11,14 @@ class markdownServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/ld-markdown.php', 'ld-markdown');
+        $this->mergeConfigFrom(__DIR__ . '/../config/sb-markdown.php', 'sb-markdown');
     }
 
     public function boot(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'ld-markdown');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'sb-markdown');
 
-        Livewire::component('ld-markdown', markdown::class);
+        Livewire::component('sb-markdown', markdown::class);
 
         $this->loadViewComponentsAs('ld', [
             Blademarkdown::class,
@@ -26,12 +26,12 @@ class markdownServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/ld-markdown.php' => config_path('ld-markdown.php'),
-            ], 'ld-markdown-config');
+                __DIR__ . '/../config/sb-markdown.php' => config_path('sb-markdown.php'),
+            ], 'sb-markdown-config');
 
             $this->publishes([
-                __DIR__ . '/../resources/views' => resource_path('views/vendor/ld-markdown'),
-            ], 'ld-markdown-views');
+                __DIR__ . '/../resources/views' => resource_path('views/vendor/sb-markdown'),
+            ], 'sb-markdown-views');
         }
     }
 }

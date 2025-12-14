@@ -13,6 +13,6 @@ class markdown extends Component
 
     public function render()
     {
-        return view('ld-markdown::components.markdown');
+        return view('sb-markdown::components.markdown');
     }
 }

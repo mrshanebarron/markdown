@@ -1,5 +1,5 @@
 <?php
 
 return [
-    // Default settings for ld-markdown
+    // Default settings for sb-markdown
 ];

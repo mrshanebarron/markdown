@@ -6,7 +6,7 @@
 import { computed } from 'vue';
 
 export default {
-  name: 'LdMarkdown',
+  name: 'SbMarkdown',
   props: {
     content: { type: String, default: '' },
     proseClass: { type: String, default: '' }

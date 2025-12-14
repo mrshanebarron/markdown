@@ -31,6 +31,6 @@ class Markdown extends Component
 
     public function render()
     {
-        return view('ld-markdown::livewire.markdown');
+        return view('sb-markdown::livewire.markdown');
     }
 }
