@@ -1,13 +1,13 @@
 <?php
 
-namespace MrShaneBarron\markdown;
+namespace MrShaneBarron\Markdown;
 
 use Illuminate\Support\ServiceProvider;
-use MrShaneBarron\markdown\Livewire\markdown;
-use MrShaneBarron\markdown\View\Components\markdown as Blademarkdown;
+use MrShaneBarron\Markdown\Livewire\Markdown;
+use MrShaneBarron\Markdown\View\Components\Markdown as BladeMarkdown;
 use Livewire\Livewire;
 
-class markdownServiceProvider extends ServiceProvider
+class MarkdownServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
@@ -18,10 +18,10 @@ class markdownServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'sb-markdown');
 
-        Livewire::component('sb-markdown', markdown::class);
+        Livewire::component('sb-markdown', Markdown::class);
 
         $this->loadViewComponentsAs('ld', [
-            Blademarkdown::class,
+            BladeMarkdown::class,
         ]);
 
         if ($this->app->runningInConsole()) {

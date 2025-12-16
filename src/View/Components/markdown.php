@@ -1,10 +1,10 @@
 <?php
 
-namespace MrShaneBarron\markdown\View\Components;
+namespace MrShaneBarron\Markdown\View\Components;
 
 use Illuminate\View\Component;
 
-class markdown extends Component
+class Markdown extends Component
 {
     public function __construct()
     {
